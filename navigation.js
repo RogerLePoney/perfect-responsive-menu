@@ -5,4 +5,9 @@ toggleMenu.addEventListener('click', function() {
 	const open = JSON.parse(toggleMenu.getAttribute('aria-expanded'));
 	toggleMenu.setAttribute('aria-expanded', !open);
 	menu.hidden = !menu.hidden;
+	if (menu.hidden) {
+		document.body.className="";
+	} else {
+		document.body.className="noscroll";
+	}
 });
